@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-mono">
+    <div class="h-[125px] flex items-center bg-orange-500 pl-10">
+        <h1 class="text-4xl">Welcome to BackBook NETWORK</h1>
+    </div>
+    <div class="relative  flex justify-center items-center flex-col overflow-hidden mx-auto">
+        <div class="flex space-x-5 mt-10 border px-10">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="{% url 'signup' %}">Register</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+        <div class="flex space-x-5 mt-8 mr-10">
+            <img src="https://media.tenor.com/sxgl2VeOrXMAAAAj/bee-eyebrows.gif" alt="">
+            <h1 class="text-4xl mt-10 items-center">Beta</h1>
+            <img src="https://media.tenor.com/E61yvtjp5DQAAAAi/spongebob.gif" alt="">
+        </div>
+        
+
+        <div class="mt-10">
+            <h1 class="text-green-600 flex justify-left text-3xl">The New Traditional Social NETWORK <br></h1>
+            <h1 class="text-red-600 flex justify-left text-left text-3xl">For Everyone</h1>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div class="mt-18">
+            <h1 class="text-black flex justify-left text-left text-3xl">Blog<br></h1>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
